@@ -63,7 +63,7 @@ body {
 	background-color: var(--clr-neutral-500);
 	display: grid;
 	align-items: start;
-	gap: var(--gap-2);
+	gap: var(--gap-1);
 
 	width: 350px;
 	padding: var(--gap-2);
@@ -120,4 +120,10 @@ body {
 	margin-right: var(--gap-1);
 	border: 1px solid var(--clr-neutral-100);
 	border-radius: 100vw;
+}
+
+@media (min-width: 400px) {
+	.card {
+		gap: var(--gap-2);
+	}
 }
