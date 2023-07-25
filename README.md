@@ -75,6 +75,30 @@ at first i try to add ::before on the `.card__image` itself, but the selector di
 .card__image:hover .card__background {
 	display: grid;
 }
+
+/* updated */
+.card__image {
+	position: relative;
+	border-radius: var(--border-radious);
+	overflow: hidden;
+}
+
+.card__image::after {
+	content: url(../images/icon-view.svg);
+	background-color: hsl(var(--clr-primary-hsl-500), 0.5);
+
+	display: grid;
+	place-items: center;
+	opacity: 0;
+	transition: opacity ease-in-out var(--transition-default);
+
+	position: absolute;
+	inset: 0;
+}
+
+.card__image:is(:hover, :focus)::after {
+	opacity: 1;
+}
 ```
 
 ### Continued development

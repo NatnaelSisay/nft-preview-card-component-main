@@ -21,6 +21,8 @@
 	--gap-1: 1rem;
 	--gap-2: 1.5rem;
 	--gap-3: 2rem;
+
+	--transition-default: 0.3s;
 }
 
 a {
@@ -75,27 +77,27 @@ body {
 	overflow: hidden;
 }
 
-.card__background {
-	content: "";
+.card__image::after {
+	content: url(../images/icon-view.svg);
 	background-color: hsl(var(--clr-primary-hsl-500), 0.5);
 
-	display: none;
+	display: grid;
 	place-items: center;
+	opacity: 0;
+	transition: opacity ease-in-out var(--transition-default);
 
 	position: absolute;
-	top: 0;
-	bottom: 0;
-	left: 0;
-	right: 0;
+	inset: 0;
 }
 
-.card__image:hover .card__background {
-	display: grid;
+.card__image:is(:hover, :focus)::after {
+	opacity: 1;
 }
 
 .card__title,
 .card__link {
 	color: var(--clr-neutral-100);
+	transition: color ease-in-out var(--transition-default);
 }
 
 .card__detail {
