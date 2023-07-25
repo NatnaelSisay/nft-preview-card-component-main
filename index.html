@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- displays site properly based on user's device -->
+
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="./images/favicon-32x32.png"
+		/>
+
+		<!-- Google Font -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap"
+			rel="stylesheet"
+		/>
+
+		<!-- CSS -->
+		<link rel="stylesheet" href="css/reset.css" />
+		<link rel="stylesheet" href="css/style.css" />
+
+		<title>Frontend Mentor | NFT preview card component</title>
+
+		<!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+		<style>
+			.attribution {
+				font-size: 13px;
+				text-align: center;
+				color: white;
+			}
+			.attribution a {
+				color: hsl(228, 45%, 44%);
+			}
+		</style>
+	</head>
+	<body>
+		<main>
+			<article class="card">
+				<a href="#" class="card__image">
+					<img src="./images/image-equilibrium.jpg" alt="Equilibrium image" />
+				</a>
+				<h1 class="card__title">
+					<a class="card__link" href="#">Equilibrium #3429</a>
+				</h1>
+				<p class="card__detail">
+					Our Equilibrium collection promotes balance and calm.
+				</p>
+
+				<div class="flex-group">
+					<div class="card__price flex-group">
+						<img
+							class="card__icon"
+							src="./images/icon-ethereum.svg"
+							alt="etherium icon"
+						/>
+						0.041 ETH
+					</div>
+
+					<div class="flex-group">
+						<img
+							class="card__icon"
+							src="./images/icon-clock.svg"
+							alt="clock icon"
+						/>
+						3 days left
+					</div>
+				</div>
+
+				<div class="horizontal-line"></div>
+
+				<div class="flex">
+					<img
+						class="card__avatar"
+						src="./images/image-avatar.png"
+						alt="Creation of Jules Wyvern"
+					/>
+					<span>
+						Creation of <a class="card__link" href="#">Jules Wyvern</a></span
+					>
+				</div>
+			</article>
+		</main>
+
+		<div class="attribution">
+			Challenge by
+			<a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+				>Frontend Mentor</a
+			>. Coded by
+			<a href="https://www.linkedin.com/in/natnael-kagnaw/">Natnael Kagnaw</a>.
+		</div>
+	</body>
+</html>
