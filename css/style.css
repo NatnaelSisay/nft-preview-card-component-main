@@ -9,11 +9,18 @@
 	--clr-neutral-900: hsl(217, 54%, 11%);
 
 	--fs-default: 18px;
+	--fs-medium: 1.2rem;
+
 	--ff-default: "Outfit", sans-serif;
 
 	--fw-default: 300;
 	--fw-medium: 400;
 	--fw-bold: 600;
+
+	--gap-0: 0.5rem;
+	--gap-1: 1rem;
+	--gap-2: 1.5rem;
+	--gap-3: 2rem;
 }
 a {
 	text-decoration: none;
@@ -55,16 +62,34 @@ body {
 	background-color: var(--clr-neutral-500);
 	display: grid;
 	align-items: start;
-	gap: 1.5rem;
+	gap: var(--gap-2);
 
 	width: 350px;
-	padding: 1.3rem;
-	margin-bottom: 1rem;
+	padding: var(--gap-2);
 }
 
 .card__image {
+	position: relative;
 	border-radius: var(--border-radious);
 	overflow: hidden;
+}
+
+.card__background {
+	content: "";
+	background-color: hsl(var(--clr-primary-hsl-500), 0.5);
+
+	display: none;
+	place-items: center;
+
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+
+.card__image:hover .card__background {
+	display: grid;
 }
 
 .card__title,
@@ -73,10 +98,10 @@ body {
 }
 
 .card__detail {
-	font-size: 1.2rem;
+	font-size: var(--fs-medium);
 }
 .card__icon {
-	margin-right: 0.5rem;
+	margin-right: var(--gap-0);
 }
 
 .card__price {
@@ -90,7 +115,7 @@ body {
 
 .card__avatar {
 	width: 2rem;
-	margin-right: 1rem;
+	margin-right: var(--gap-1);
 	border: 1px solid var(--clr-neutral-100);
 	border-radius: 100vw;
 }
